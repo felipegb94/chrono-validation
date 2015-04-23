@@ -27,6 +27,8 @@ SET(TEST_PROGRAMS
     test_transpring
     test_transpringcb
     test_rotspring
+    new_test_distance
+    new_test_revolute
 )
 
 #--------------------------------------------------------------
