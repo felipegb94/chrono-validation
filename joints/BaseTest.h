@@ -57,7 +57,7 @@ public:
 
   /// Main function for running the test
   void run() {
-    
+
     m_passed = execute();
     finalizeJson();
   }
@@ -158,6 +158,9 @@ private:
     m_testJson.AddMember("metrics", m_jsonMetrics, allocator);
 
     // Write Json to file
+    /* PATH in buildbotslave:
+     /home/hammad/buildbot/slave/test_results/results
+     */
     std::string filename =  "/Users/felipegb94/SBEL/results/" + m_name + ".json";
     char writeBuffer[65536];
     FILE* fp = fopen(filename.c_str(), "w"); // non-Windows use "w"
